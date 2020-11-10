@@ -1,0 +1,181 @@
+A-1 solution
+
+
+
+1.   
+
+all local variables declaration in gimple file is line by line i.e one declaration per line. Global variables are not declared they are used directly in gimple
+
+
+2.
+
+complex expressions are broken down into smaller expressions and temporary variables are used to store their values.to break complex expressions to smaller one precedence order is considered.
+
+3.
+
+
+float/doubles are represented using e when float value is assigned to int a temporary variable is introduced and using that variable float value is converted to int
+
+
+
+4
+
+global variables are not declared they are used directly. in gimple temporary variable is introduced because both side of of equation contain z so for memory allotation of z temporary variable is introduced
+
+
+
+_____________________________________________________________________________________________________________________________
+
+
+
+A-2 Solution
+
+
+1.
+
+
+IN Gimple statements from if else are put into different blocks it is cheaking if condition is true then goto this block or else goto this block and remaining part of code is also put into block and path for this blocks is mentioned in the above mentioned blocks.
+
+
+
+2
+
+yes the representation using cfg is better than gimples here blocks are arranged in very good manner so that visulasation better
+
+
+
+__________________________________________________________________________________________________________________________
+
+
+
+
+A-3 solution
+
+
+
+1.
+
+while loop is also converted into different blocks and using if else conditions the the operation is taking place in gimple and blocks are repeatedly called 
+
+
+2
+
+there is no any major difference in while loop and for loop only initial value is declared in one block and then second block is called in for loop
+
+
+__________________________________________________________________________________________________________________________________
+
+
+A-4 solution
+
+
+1.
+
+
+array declaration take place in single line and also each element of array is assigned separatly in different defferent lines
+
+
+2.
+
+a[i]=b[i] is spilt into to two different statements because gimple can not do two operations in one line gmple cannot read and write array element simultaneously thats why temporary variable is introduced
+
+
+
+3.
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________________________________________________________________________________________________
+
+A-5 solution
+
+
+
+1
+
+The suffix (D) is used for some local variables because this variables are using without assigning them some value 
+
+
+2.
+
+
+a_1 = PHI <a_7(3), a_5(4)>
+
+
+
+
+_______________________________________________________________________________________________________________________________
+
+
+A-6 solution
+
+
+#include<stdio.h>
+
+void main() {
+	int i, j;
+	for(i = 2; i <= 100; i++) {
+		if (i % j == 0)
+			break;
+
+	}
+
+	if(i == j) {
+		printf("%d\n", i);
+	}
+
+
+	return;
+}
+
+
+
+______________________________________________________________________________________________________________________________
+
+
+B-1 solutions
+
+1.
+
+
+
+2.
+
+
+_______________________________________________________________________________________________________________________________________
+
+
+B-2 solution
+
+1.
+
+_______________________________________________________________________________________________________________________________________
+
+B-3 solution
+
+1.
+  a will take values from 4 to 99 therefor if condition a<4 will never be true and the statement b=b+2 will not execute 
+
+_______________________________________________________________________________________________________________________________________
+
+B-4 solution
+
+1.
+
+original code compute a+c two times but fre pass uses temperory variable which has stored value value of a+c second time
+
+2.
+
+
+3.
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
